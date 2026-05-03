@@ -1,28 +1,162 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>topic</title>
-  </head>
-  <body>
-    <header>
-      <h1>first header</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">search</a></li>
-        <li><a href="">login</a></li>
-        <li><a href="">register</a></li>
-        <li><a href="">details</a></li>
-        <li><a href="">compare</a></li>
-        <li><a href="">contact</a></li>
-        <li><a href="">about</a></li>
-      </ul>
-    </nav>
-    <main>main txt</main>
-    <section>section txt</section>
-    <footer>foooter txt</footer>
-  </body>
+    <link rel="stylesheet" href="css/whitetheme.css" />
+    <title>BookStore</title>
+</head>
+
+<body>
+    <!-- ── HEADER & NAV ── -->
+    <div class="header">
+        <header>
+            <a href="index.html">
+                <h1>Bookology</h1>
+            </a>
+        </header>
+        <nav>
+            <ul>
+                <li><input class="themebutton" type="button" value="dark theme"></li>
+
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="trending.html">trending</a></li>
+                <li><a href="cart.html">Carts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- ── HERO SECTION ── -->
+    <main>
+        <section class="hero">
+            <h2>Welcome to Bookology</h2>
+            <p>Discover your next favorite book. <br> Browse thousands of titles across every genre.</p>
+
+
+            <div class="searchbar">
+                <input type="text" id="searchInput" placeholder="Search for a book or author..." />
+                <button id="searchBtn">Search</button>
+            </div>
+        </section>
+
+
+
+        <!-- ── FEATURED BOOKS ── -->
+        <section class="books-section">
+            <h2>Featured Books</h2>
+            <div class="books-grid" id="booksContainer">
+                <!-- Book Card 1 -->
+                <div class="book-card">
+                    <img src="books/book1/The Great Gatsby.jpg" alt="Book Cover" />
+                    <h3>The Great Gatsby</h3>
+                    <p class="author">F. Scott Fitzgerald</p>
+                    <p class="genre">Fiction</p>
+                    <p class="price">$12.99</p>
+                    <button class="btn-add">Add to Cart</button>
+                    <div class="review">
+                        <h4>Reader Review</h4>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p>"A timeless classic that everyone should read."</p>
+                        <span>— Ahmed K.</span>
+                    </div>
+                </div>
+
+                <!-- Book Card 2 -->
+                <div class="book-card">
+                    <img src="books/book2/To Kill a Mockingbird.jpg" alt="Book Cover" />
+                    <h3>To Kill a Mockingbird</h3>
+                    <p class="author">Harper Lee</p>
+                    <p class="genre">Drama</p>
+                    <p class="price">$10.99</p>
+                    <button class="btn-add">Add to Cart</button>
+                    <div class="review">
+                        <h4>Reader Review</h4>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p>"Powerful and moving. A must-read."</p>
+                        <span>— Sara M.</span>
+                    </div>
+                </div>
+
+                <!-- Book Card 3 -->
+                <div class="book-card">
+                    <img src="books/book3/1984.jpg" alt="Book Cover" />
+                    <h3>1984</h3>
+                    <p class="author">George Orwell</p>
+                    <p class="genre">Science Fiction</p>
+                    <p class="price">$9.99</p>
+                    <button class="btn-add">Add to Cart</button>
+                    <div class="review">
+                        <h4>Reader Review</h4>
+                        <p>⭐⭐⭐⭐</p>
+                        <p>"Chilling and thought-provoking."</p>
+                        <span>— Omar G.</span>
+                    </div>
+                </div>
+
+                <!-- Book Card 4 -->
+                <div class="book-card">
+                    <img src="books/book4/Pride and Prejudice.jpg" alt="Book Cover" />
+                    <h3>Pride and Prejudice</h3>
+                    <p class="author">Jane Austen</p>
+                    <p class="genre">Romance</p>
+                    <p class="price">$8.99</p>
+                    <button class="btn-add">Add to Cart</button>
+                    <div class="review">
+                        <h4>Reader Review</h4>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p>"Witty and endlessly charming."</p>
+                        <span>— Nour A.</span>
+                    </div>
+                </div>
+
+                <!-- Book Card 5 -->
+                <div class="book-card">
+                    <img src="books/book5/The Alchemist.jpg" alt="Book Cover" />
+                    <h3>The Alchemist</h3>
+                    <p class="author">Paulo Coelho</p>
+                    <p class="genre">Philosophy</p>
+                    <p class="price">$11.99</p>
+                    <button class="btn-add">Add to Cart</button>
+                    <div class="review">
+                        <h4>Reader Review</h4>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p>"Inspiring and beautifully written."</p>
+                        <span>— Youssef T.</span>
+                    </div>
+                </div>
+
+                <!-- Book Card 6 -->
+                <div class="book-card">
+                    <img src="books/book6/Brave New World.jpg" alt="Book Cover" />
+                    <h3>Brave New World</h3>
+                    <p class="author">Aldous Huxley</p>
+                    <p class="genre">Science Fiction</p>
+                    <p class="price">$10.49</p>
+                    <button class="btn-add">Add to Cart</button>
+                    <div class="review">
+                        <h4>Reader Review</h4>
+                        <p>⭐⭐⭐⭐</p>
+                        <p>"Disturbing but incredibly relevant."</p>
+                        <span>— Layla H.</span>
+                    </div>
+                </div>
+
+            </div><!-- end books-grid -->
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <div class="footer">
+        <footer>
+            <p>© 2026 Bookology — All rights reserved</p>
+        </footer>
+    </div>
+</body>
+
 </html>
