@@ -1,3 +1,45 @@
+/* --- Dark Mode Overrides --- */
+
+/* Changes the main background and text color */
+body.dark-mode {
+  background-color: #0f0d0a !important;
+  color: #f5f0e8 !important;
+}
+
+/* Updates the header background and links */
+body.dark-mode .header {
+  background-color: #1e1b16 !important;
+  border-bottom: 1px solid #2a2d3a !important;
+}
+
+body.dark-mode .header a, 
+body.dark-mode .header h1 {
+  color: #f5f0e8 !important;
+}
+
+/* Updates the book cards to look better in the dark */
+body.dark-mode .book-card {
+  background-color: #1e1b16 !important;
+  border-color: #c8a96e !important; /* Gold border from your SCSS variables */
+  color: #f5f0e8;
+}
+
+/* Ensures the category cards still pop */
+body.dark-mode .cat-name {
+  color: #ffffff;
+}
+
+/* Adjusts the footer */
+body.dark-mode .footer {
+  background-color: #1e1b16 !important;
+  border-top: 1px solid #2a2d3a !important;
+}
+
+
+
+
+
+
 * {
   font-family: cursive;
   margin: 0px;
@@ -40,7 +82,7 @@
   background-color: black;
   color: aliceblue;
   border-radius: 15px;
-    
+
 }
 .books-grid {
   display: grid;
