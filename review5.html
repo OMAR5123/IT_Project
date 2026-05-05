@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookology - Reviews</title>
+    <style>
+        /* CSS - المتغيرات والتنسيق */
+        :root {
+            --primary: #000033; /* أخضر */
+            --bg: #0f172a;      /* كحلي */
+            --nav-bg: #000080;
+            --text: #f8fafc;
+            --card: #1e293b;
+        }
+
+        /* الثيم الأحمر (الأسود في أحمر) */
+        body.red-theme {
+            --primary: #8b0000;
+            --bg: #000000;
+            --nav-bg: #1a1a1a;
+            --text: #ffffff;
+            --card: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            transition: 0.3s;
+        }
+
+        /* تنسيق شريط التنقل (Nav Bar) بنفس كلمات السكرين شوت */
+        nav {
+            background: var(--nav-bg);
+            padding: 15px 5%;
+            display: flex;
+            justify-content :space-between;
+            align-items: center;
+           
+        }
+
+        .logo { font-size: 24px; font-weight: bold; color: var(--text); }
+
+        .nav-links { display:flex; gap:15px; list-style-type:none; margin: 0; padding: 0; }
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--text); 
+            font-size: 14px; 
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        .theme-toggle {
+            background: #000; color: #fff;
+            border: none; padding: 8px 15px; border-radius: 20px;
+            cursor: pointer; font-size: 12px;
+        }
+        body.red-theme .theme-toggle { background: var(--primary); color: #fff; }
+
+        /* محتوى الصفحة */
+        .container { max-width: 900px; margin: 40px auto; padding: 20px; }
+
+        .review-section {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--primary);
+        }
+
+        .stats-table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        .stats-table th, .stats-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        .stats-table th { background: var(--primary); color: white; }
+
+        .input-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea, select {
+            width: 100%; padding: 12px; border-radius: 8px;
+            border: 1px solid #ccc; background: transparent; color: inherit;
+        }
+
+        .btn-submit {
+            width: 100%; background: var(--primary); color: white;
+            padding: 15px; border: none; border-radius: 8px;
+            font-weight: bold; cursor: pointer; transition: 0.3s;
+        }
+        .btn-submit:hover { opacity: 0.8; }
+
+        .error-text { color: red; font-size: 12px; display: none; }
+
+        .review-card {
+            background: rgba(0,0,0,0.05); padding: 15px; border-radius: 10px;
+            margin-top: 15px; border-right: 5px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- المنيو المطابق للسكرين شوت -->
+    <nav>
+        <div class="logo">Bookology</div>
+        <ul class="nav-links">
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">review</a></li>
+            <li><a href="#">Favorites</a></li>
+            <li><a href="#">trending</a></li>
+            <li><a href="#">Carts</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeBtn">Switch Theme</button>
+    </nav>
+
+    <div class="container">
+        <div class="review-section">
+            <h2 style="text-align: center;">مراجعات الكتب التقنية</h2>
+            
+            <!-- فيديو مراجعة -->
+            <video width="100%" controls style="border-radius: 10px; margin-bottom: 20px;">
+                <source src="review.mp4" type="video/mp4">
+            </video>
+
+            <!-- جدول الكتب -->
+            <table class="stats-table">
+                <thead>
+                    <tr><th>الكتاب</th><th>المؤلف</th><th>التقييم العام</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>لسان العرب  </td><td>ابن منظور</td><td>5/5</td></tr>
+                    <tr><td>وحي القلم</td><td>الرافعي</td><td>4.5/5</td></tr>
+                </tbody>
+            </table>
+
+            <!-- الفورم -->
+            <form id="bookForm" novalidate>
+                <div class="input-group">
+                    <label>اسم الكتاب:</label>
+                    <input type="text" id="title" placeholder="أدخل اسم الكتاب">
+                    <div id="titleErr" class="error-text">يرجى إدخال اسم الكتاب</div>
+                </div>
+                <div class="input-group">
+                    <label>التقييم:</label>
+                    <select id="rate">
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="1">⭐</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>رأيك الفني:</label>
+                    <textarea id="msg" rows="4" placeholder="اكتب مراجعتك..."></textarea>
+                    <div id="msgErr" class="error-text">يرجى كتابة المراجعة</div>
+                </div>
+                <button type="submit" class="btn-submit">نشر المراجعة</button>
+            </form>
+
+            <div id="reviewList" style="margin-top: 30px;">
+                <h3>المراجعات الأخيرة:</h3>
+                <!-- هنا تظهر المراجعات -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // تبديل الثيم
+        const btn = document.getElementById('themeBtn');
+        if(localStorage.getItem('theme') === 'red') document.body.classList.add('red-theme');
+
+        btn.onclick = () => {
+            document.body.classList.toggle('red-theme');
+            localStorage.setItem('theme', document.body.classList.contains('red-theme') ? 'red' : 'green');
+        };
+
+        // التحقق والنشر
+        const form = document.getElementById('bookForm');
+        form.onsubmit = (e) => {
+            e.preventDefault();
+            const title = document.getElementById('title').value;
+            const msg = document.getElementById('msg').value;
+            let ok = true;
+
+            if(title.length < 2) { document.getElementById('titleErr').style.display='block'; ok=false; }
+            else document.getElementById('titleErr').style.display='none';
+
+            if(msg.length < 5) { document.getElementById('msgErr').style.display='block'; ok=false; }
+            else document.getElementById('msgErr').style.display='none';
+
+            if(ok) {
+                const div = document.createElement('div');
+                div.className = 'review-card';
+                div.innerHTML = `<h4>${title}</h4><p>${msg}</p>`;
+                document.getElementById('reviewList').prepend(div);
+                form.reset();
+            }
+        };
+    </script>
+</body>
+</html>
