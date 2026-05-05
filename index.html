@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>Bookology</title>
 </head>
+
 <body>
     <!-- HEADER & NAV -->
     <div class="header">
         <header>
-            <a href="index.html"><h1><i class="fa fa-book"></i> Bookology</h1></a>
+            <a href="index.html">
+                <h1><i class="fa fa-book"></i> Bookology</h1>
+            </a>
         </header>
         <nav>
             <ul>
@@ -21,6 +25,7 @@
                 <li><a href="favorites.html"><i class="fa fa-heart"></i> Favorites</a></li>
                 <li><a href="trending.html"><i class="fa fa-fire"></i> Trending</a></li>
                 <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="review.html"><i class="fa review"></i>review</a></li>
                 <li><a href="about.html"><i class="fa fa-info-circle"></i> About</a></li>
                 <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a></li>
                 <li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
@@ -40,19 +45,12 @@
             </div>
         </section>
 
-        <!-- AUDIO PLAYER - required feature -->
-        <section style="text-align:center; padding: 10px;">
-            <p><i class="fa fa-music"></i> Reading Ambience:</p>
-            <audio controls>
-                <source src="audio/ambience.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </section>
+
 
         <!-- VIEW TOGGLE - List/Grid required feature -->
         <section class="books-section">
             <div style="display:flex; justify-content:space-between; align-items:center; padding: 0 24px;">
-                <h2>Featured Books</h2>
+                <h2 style="margin:10px 0 0 40%;">Featured Books</h2>
                 <div>
                     <button id="gridViewBtn" title="Grid View"><i class="fa fa-th"></i> Grid</button>
                     <button id="listViewBtn" title="List View"><i class="fa fa-list"></i> List</button>
@@ -152,7 +150,8 @@
                 </div>
                 <!-- Book Card 7 -->
                 <div class="book-card">
-                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400" alt="The Midnight Library" />
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400"
+                        alt="The Midnight Library" />
                     <h3>The Midnight Library</h3>
                     <p class="author"><i class="fa fa-user"></i> Matt Haig</p>
                     <p class="genre"><i class="fa fa-tag"></i> Contemporary Fiction</p>
@@ -170,7 +169,8 @@
                 </div>
                 <!-- Book Card 9 -->
                 <div class="book-card">
-                    <img src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?q=80&w=400" alt="Project Hail Mary" />
+                    <img src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?q=80&w=400"
+                        alt="Project Hail Mary" />
                     <h3>Project Hail Mary</h3>
                     <p class="author"><i class="fa fa-user"></i> Andy Weir</p>
                     <p class="genre"><i class="fa fa-tag"></i> Science Fiction</p>
@@ -179,7 +179,8 @@
                 </div>
                 <!-- Book Card 10 -->
                 <div class="book-card">
-                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=400" alt="Atomic Habits" />
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=400"
+                        alt="Atomic Habits" />
                     <h3>Atomic Habits</h3>
                     <p class="author"><i class="fa fa-user"></i> James Clear</p>
                     <p class="genre"><i class="fa fa-tag"></i> Self-Help</p>
@@ -194,7 +195,8 @@
                 </div>
                 <!-- Book Card 11 -->
                 <div class="book-card">
-                    <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1565909496i/35959740.jpg" alt="Circe" />
+                    <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1565909496i/35959740.jpg"
+                        alt="Circe" />
                     <h3>Circe</h3>
                     <p class="author"><i class="fa fa-user"></i> Madeline Miller</p>
                     <p class="genre"><i class="fa fa-tag"></i> Mythology</p>
@@ -209,7 +211,8 @@
                 </div>
                 <!-- Book Card 12 -->
                 <div class="book-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/ar/a/a9/The_Hobbit_trilogy_dvd_cover.jpg" alt="The Hobbit" />
+                    <img src="https://upload.wikimedia.org/wikipedia/ar/a/a9/The_Hobbit_trilogy_dvd_cover.jpg"
+                        alt="The Hobbit" />
                     <h3>The Hobbit</h3>
                     <p class="author"><i class="fa fa-user"></i> J.R.R. Tolkien</p>
                     <p class="genre"><i class="fa fa-tag"></i> Fantasy</p>
@@ -246,4 +249,5 @@
     <script src="javascript/script.js"></script>
     <script src="javascript/FormValidator.js"></script>
 </body>
+
 </html>
