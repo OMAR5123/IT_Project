@@ -1,0 +1,45 @@
+/* ── ADD THESE TO THE BOTTOM OF whitetheme.css ── */
+
+/* List View layout */
+.books-grid.list-view {
+  grid-template-columns: 1fr !important;
+}
+.books-grid.list-view .book-card {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 20px;
+}
+.books-grid.list-view .book-card img {
+  width: 100px !important;
+  height: 140px !important;
+  object-fit: cover;
+}
+
+/* beforefooter fix */
+.beforefooter ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+.beforefooter a {
+  color: white;
+}
+
+/* CSS Transformation on book cards - required feature */
+.book-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* CSS Transform on category cards */
+.cat-card {
+  transition: transform 0.2s ease;
+}
+.cat-card:hover {
+  transform: scale(1.05);
+}

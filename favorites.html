@@ -1,52 +1,78 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/whitetheme.css" />
-    <title>BookStore</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Bookology</title>
 </head>
-
 <body>
-    <!-- ── HEADER & NAV ── -->
+    <!-- HEADER & NAV -->
     <div class="header">
         <header>
-            <a href="index.html">
-                <h1>Bookology</h1>
-            </a>
+            <a href="index.html"><h1><i class="fa fa-book"></i> Bookology</h1></a>
         </header>
         <nav>
             <ul>
-                <li><input class="themebutton" type="button" value="dark theme"></li>
-
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="trending.html">trending</a></li>
-                <li><a href="cart.html">Carts</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><input class="themebutton" type="button" value="🌙 Dark Theme"></li>
+                <li><a href="categories.html"><i class="fa fa-th-large"></i> Categories</a></li>
+                <li><a href="favorites.html"><i class="fa fa-heart"></i> Favorites</a></li>
+                <li><a href="trending.html"><i class="fa fa-fire"></i> Trending</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="about.html"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+                <li><a href="register.html"><i class="fa fa-user-plus"></i> Register</a></li>
             </ul>
         </nav>
     </div>
 
+    <main>
+        <h2 style="text-align:center; padding:20px;"><i class="fa fa-heart"></i> My Favorites</h2>
 
+        <div class="books-grid">
+            <div class="book-card">
+                <img src="books/book1/The-Great-Gatsby.jpg" alt="The Great Gatsby" />
+                <h3>The Great Gatsby</h3>
+                <p class="author"><i class="fa fa-user"></i> F. Scott Fitzgerald</p>
+                <p class="price"><i class="fa fa-dollar-sign"></i> $12.99</p>
+                <button class="btn-add"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+                <button style="background:#e74c3c; color:white; border:none; padding:8px; border-radius:4px; cursor:pointer; margin-top:5px;">
+                    <i class="fa fa-heart-broken"></i> Remove
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="books/book5/The-Alchemist.jpg" alt="The Alchemist" />
+                <h3>The Alchemist</h3>
+                <p class="author"><i class="fa fa-user"></i> Paulo Coelho</p>
+                <p class="price"><i class="fa fa-dollar-sign"></i> $11.99</p>
+                <button class="btn-add"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+                <button style="background:#e74c3c; color:white; border:none; padding:8px; border-radius:4px; cursor:pointer; margin-top:5px;">
+                    <i class="fa fa-heart-broken"></i> Remove
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=400" alt="Atomic Habits" />
+                <h3>Atomic Habits</h3>
+                <p class="author"><i class="fa fa-user"></i> James Clear</p>
+                <p class="price"><i class="fa fa-dollar-sign"></i> $17.99</p>
+                <button class="btn-add"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+                <button style="background:#e74c3c; color:white; border:none; padding:8px; border-radius:4px; cursor:pointer; margin-top:5px;">
+                    <i class="fa fa-heart-broken"></i> Remove
+                </button>
+            </div>
+        </div>
+    </main>
 
-
-
-
-
-
-
-
-        <div class="footer">
+    <div class="footer">
         <footer>
             <p>© 2026 Bookology — All rights reserved</p>
         </footer>
-        <script src="script.js"></script>
     </div>
-</body>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
 </html>

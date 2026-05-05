@@ -1,59 +1,80 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/whitetheme.css" />
-    <title>BookStore</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Bookology</title>
 </head>
-
 <body>
-    <!-- ── HEADER & NAV ── -->
+    <!-- HEADER & NAV -->
     <div class="header">
         <header>
-            <a href="index.html">
-                <h1>Bookology</h1>
-            </a>
+            <a href="index.html"><h1><i class="fa fa-book"></i> Bookology</h1></a>
         </header>
         <nav>
             <ul>
-                <li><input class="themebutton" type="button" value="dark theme"></li>
-
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="trending.html">trending</a></li>
-                <li><a href="cart.html">Carts</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><input class="themebutton" type="button" value="🌙 Dark Theme"></li>
+                <li><a href="categories.html"><i class="fa fa-th-large"></i> Categories</a></li>
+                <li><a href="favorites.html"><i class="fa fa-heart"></i> Favorites</a></li>
+                <li><a href="trending.html"><i class="fa fa-fire"></i> Trending</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="about.html"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+                <li><a href="register.html"><i class="fa fa-user-plus"></i> Register</a></li>
             </ul>
         </nav>
     </div>
-    <div class="contact">
 
-        <div class="contactform">
-            <form action="#" class="form">
-                <input type="text" placeholder="name" required class="name">
-                <br>
-                <input type="email" placeholder="email" required class="email">
-                <br>
-                <input type="number" placeholder="phone number" required class="number">
-                <br>
-                <textarea placeholder="your massage" rows="5" required class="massege"></textarea>
-                <br>
-                <button type="submit" class="button">send</button>
-                <p style="color: aliceblue; font-size: 50px;"> </p>
-            </form>
+    <main>
+        <h2 style="text-align:center; padding:20px;"><i class="fa fa-envelope"></i> Contact Us</h2>
+
+        <div class="contact">
+            <!-- CONTACT FORM with jQuery validation -->
+            <div class="contactform">
+                <form id="contactForm" action="#">
+                    <input type="text" id="contactName" placeholder="Your Name" class="name" />
+                    <span class="error-msg" id="contactName-error"></span>
+                    <br>
+                    <input type="email" id="contactEmail" placeholder="Your Email" class="email" />
+                    <span class="error-msg" id="contactEmail-error"></span>
+                    <br>
+                    <input type="number" id="contactPhone" placeholder="Phone Number" class="number" />
+                    <span class="error-msg" id="contactPhone-error"></span>
+                    <br>
+                    <textarea id="contactMessage" placeholder="Your Message" rows="5" class="massege"></textarea>
+                    <span class="error-msg" id="contactMessage-error"></span>
+                    <br>
+                    <button type="submit" class="button"><i class="fa fa-paper-plane"></i> Send Message</button>
+                    <p class="success-msg" id="contact-success">✅ Message sent successfully!</p>
+                </form>
+            </div>
         </div>
-        
-    </div>
+
+        <!-- IFRAME - required feature: Google Maps embed -->
+        <section style="padding: 20px; text-align:center;">
+            <h3><i class="fa fa-map-marker-alt"></i> Find Us</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7!2d31.2357!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAyJzM5LjkiTiAzMcKwMTQnMDguNiJF!5e0!3m2!1sen!2seg!4v1620000000000"
+                width="600" height="300"
+                style="border:0; border-radius:10px; max-width:100%;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section>
+    </main>
+
     <div class="footer">
         <footer>
             <p>© 2026 Bookology — All rights reserved</p>
         </footer>
-        <script src="script.js"></script>
-</body>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/FormValidator.js"></script>
+</body>
 </html>

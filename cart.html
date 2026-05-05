@@ -1,87 +1,89 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/whitetheme.css" />
-    <title>BookStore</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Bookology</title>
 </head>
-
 <body>
-    <!-- ── HEADER & NAV ── -->
+    <!-- HEADER & NAV -->
     <div class="header">
         <header>
-            <a href="index.html">
-                <h1>Bookology</h1>
-            </a>
+            <a href="index.html"><h1><i class="fa fa-book"></i> Bookology</h1></a>
         </header>
         <nav>
             <ul>
-                <li><input class="themebutton" type="button" value="dark theme"></li>
-
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="trending.html">trending</a></li>
-                <li><a href="cart.html">Carts</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><input class="themebutton" type="button" value="🌙 Dark Theme"></li>
+                <li><a href="categories.html"><i class="fa fa-th-large"></i> Categories</a></li>
+                <li><a href="favorites.html"><i class="fa fa-heart"></i> Favorites</a></li>
+                <li><a href="trending.html"><i class="fa fa-fire"></i> Trending</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="about.html"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+                <li><a href="register.html"><i class="fa fa-user-plus"></i> Register</a></li>
             </ul>
         </nav>
     </div>
 
-
-
-
-
-    <div class="cart-container">
-        <!-- قائمة المشتريات -->
-        <div class="items-list">
-            <h3>Your Books</h3>
-            <div class="book">
-                <span>how to make a bomb</span>
-                <span>250 EGP</span>
+    <main>
+        <h2 style="text-align:center; padding:20px;"><i class="fa fa-shopping-cart"></i> Your Cart</h2>
+        <div class="cart-container">
+            <!-- Items List -->
+            <div class="items-list">
+                <h3><i class="fa fa-book"></i> Your Books</h3>
+                <div class="book">
+                    <span>The Great Gatsby</span>
+                    <span>$12.99</span>
+                </div>
+                <div class="book">
+                    <span>1984</span>
+                    <span>$9.99</span>
+                </div>
+                <div class="book">
+                    <span>The Alchemist</span>
+                    <span>$11.99</span>
+                </div>
+                <div class="total">Total: $34.97</div>
             </div>
-            <div class="book">
-                <span>russuin bullshit book</span>
-                <span>150 EGP</span>
+            <hr>
+            <!-- Payment Form with validation -->
+            <div class="payment-form">
+                <form id="paymentForm">
+                    <input type="text" id="cardName" placeholder="Cardholder Name" />
+                    <span class="error-msg" id="cardName-error"></span>
+
+                    <input type="text" id="cardNumber" placeholder="Card Number (16 digits)" maxlength="16" />
+                    <span class="error-msg" id="cardNumber-error"></span>
+
+                    <div class="row">
+                        <div>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" />
+                            <span class="error-msg" id="expiry-error"></span>
+                        </div>
+                        <div>
+                            <input type="text" id="cvv" placeholder="CVV" maxlength="3" />
+                            <span class="error-msg" id="cvv-error"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class="pay-btn"><i class="fa fa-lock"></i> Pay Now</button>
+                    <p class="success-msg" id="pay-success">✅ Payment successful! Thank you.</p>
+                </form>
             </div>
-            <div class="total">Total: 400 EGP</div>
         </div>
+    </main>
 
-        <hr>
-
-        <!-- بيانات الدفع -->
-        <div class="payment-form">
-            <input type="text" placeholder="Card Name">
-            <input type="text" placeholder="Card Number">
-            <div class="row">
-                <input type="text" placeholder="MM/YY">
-                <input type="text" placeholder="CVV">
-            </div>
-            <button class="pay-btn">Pay Now</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-
-
-
-
-
-
-
-
-
-
-        <div class="footer">
+    <div class="footer">
         <footer>
             <p>© 2026 Bookology — All rights reserved</p>
         </footer>
-        <script src="script.js"></script>
     </div>
-</body>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/FormValidator.js"></script>
+</body>
 </html>

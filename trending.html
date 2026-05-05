@@ -1,127 +1,91 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/whitetheme.css" />
-    <title>BookStore</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Bookology</title>
 </head>
-
 <body>
-    <!-- ── HEADER & NAV ── -->
+    <!-- HEADER & NAV -->
     <div class="header">
         <header>
-            <a href="index.html">
-                <h1>Bookology</h1>
-            </a>
+            <a href="index.html"><h1><i class="fa fa-book"></i> Bookology</h1></a>
         </header>
         <nav>
             <ul>
-                <li><input class="themebutton" type="button" value="dark theme"></li>
-
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="trending.html">trending</a></li>
-                <li><a href="cart.html">Carts</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><input class="themebutton" type="button" value="🌙 Dark Theme"></li>
+                <li><a href="categories.html"><i class="fa fa-th-large"></i> Categories</a></li>
+                <li><a href="favorites.html"><i class="fa fa-heart"></i> Favorites</a></li>
+                <li><a href="trending.html"><i class="fa fa-fire"></i> Trending</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="about.html"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+                <li><a href="register.html"><i class="fa fa-user-plus"></i> Register</a></li>
             </ul>
         </nav>
     </div>
 
-
-
-
-
-
-
     <main class="main">
-        <!-- Page Header -->
-        <h1 class="page-title">Trending Now</h1>
+        <h1 class="page-title"><i class="fa fa-fire"></i> Trending Now</h1>
         <p class="section-label">Top picks from the Bookology community</p>
 
-        <!-- Books Grid -->
         <div class="books-grid">
-
-            <!-- Book Card 1 -->
             <div class="book-card">
-                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400" alt="Book Cover">
-                <div class="book-details">
-                    <h3>The Midnight Library</h3>
-                    <p>Matt Haig</p>
-                    <button class="themebutton">View Details</button>
-                </div>
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400" alt="The Midnight Library" />
+                <h3>The Midnight Library</h3>
+                <p class="author">Matt Haig</p>
+                <p class="price">$14.99</p>
+                <button class="btn-add"><i class="fa fa-cart-plus"></i> Add to Cart</button>
             </div>
-
-            <!-- Book Card 2 -->
             <div class="book-card">
-                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=400" alt="Book Cover">
-                <div class="book-details">
-                    <h3>Atomic Habits</h3>
-                    <p>James Clear</p>
-                    <button class="themebutton">View Details</button>
-                </div>
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=400" alt="Atomic Habits" />
+                <h3>Atomic Habits</h3>
+                <p class="author">James Clear</p>
+                <p class="price">$17.99</p>
+                <button class="btn-add"><i class="fa fa-cart-plus"></i> Add to Cart</button>
             </div>
-
-            <!-- Book Card 3 -->
             <div class="book-card">
-                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=400" alt="Book Cover">
-                <div class="book-details">
-                    <h3>Dune</h3>
-                    <p>Frank Herbert</p>
-                    <button class="themebutton">View Details</button>
-                </div>
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=400" alt="Dune" />
+                <h3>Dune</h3>
+                <p class="author">Frank Herbert</p>
+                <p class="price">$18.00</p>
+                <button class="btn-add"><i class="fa fa-cart-plus"></i> Add to Cart</button>
             </div>
-
-            <!-- Book Card 4 -->
             <div class="book-card">
-                <img src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?q=80&w=400" alt="Book Cover">
-                <div class="book-details">
-                    <h3>Project Hail Mary</h3>
-                    <p>Andy Weir</p>
-                    <button class="themebutton">View Details</button>
-                </div>
+                <img src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?q=80&w=400" alt="Project Hail Mary" />
+                <h3>Project Hail Mary</h3>
+                <p class="author">Andy Weir</p>
+                <p class="price">$16.99</p>
+                <button class="btn-add"><i class="fa fa-cart-plus"></i> Add to Cart</button>
             </div>
-
-            <!-- Book Card 5 -->
             <div class="book-card">
-                <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=400" alt="Book Cover">
-                <div class="book-details">
-                    <h3>The Great Gatsby</h3>
-                    <p>F. Scott Fitzgerald</p>
-                    <button class="themebutton">View Details</button>
-                </div>
+                <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=400" alt="The Great Gatsby" />
+                <h3>The Great Gatsby</h3>
+                <p class="author">F. Scott Fitzgerald</p>
+                <p class="price">$12.99</p>
+                <button class="btn-add"><i class="fa fa-cart-plus"></i> Add to Cart</button>
             </div>
-
-            <!-- Book Card 6 -->
             <div class="book-card">
-                <img src="https://images.unsplash.com/photo-1531988042231-d39a9cc12a9a?q=80&w=400" alt="Book Cover">
-                <div class="book-details">
-                    <h3>Lessons in Chemistry</h3>
-                    <p>Bonnie Garmus</p>
-                    <button class="themebutton">View Details</button>
-                </div>
+                <img src="https://images.unsplash.com/photo-1531988042231-d39a9cc12a9a?q=80&w=400" alt="Lessons in Chemistry" />
+                <h3>Lessons in Chemistry</h3>
+                <p class="author">Bonnie Garmus</p>
+                <p class="price">$13.49</p>
+                <button class="btn-add"><i class="fa fa-cart-plus"></i> Add to Cart</button>
             </div>
-
         </div>
     </main>
-
-
-
-
-
-
-
 
     <div class="footer">
         <footer>
             <p>© 2026 Bookology — All rights reserved</p>
         </footer>
-        <script src="script.js"></script>
     </div>
-</body>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
 </html>

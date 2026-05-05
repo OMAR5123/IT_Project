@@ -1,171 +1,81 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/whitetheme.css" />
-    <title>BookStore</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Bookology</title>
 </head>
-
 <body>
-    <!-- ── HEADER & NAV ── -->
+    <!-- HEADER & NAV -->
     <div class="header">
         <header>
-            <a href="index.html">
-                <h1>Bookology</h1>
-            </a>
+            <a href="index.html"><h1><i class="fa fa-book"></i> Bookology</h1></a>
         </header>
         <nav>
             <ul>
-                <li><input class="themebutton" type="button" value="dark theme"></li>
-
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="trending.html">trending</a></li>
-                <li><a href="cart.html">Carts</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><input class="themebutton" type="button" value="🌙 Dark Theme"></li>
+                <li><a href="categories.html"><i class="fa fa-th-large"></i> Categories</a></li>
+                <li><a href="favorites.html"><i class="fa fa-heart"></i> Favorites</a></li>
+                <li><a href="trending.html"><i class="fa fa-fire"></i> Trending</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="about.html"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+                <li><a href="register.html"><i class="fa fa-user-plus"></i> Register</a></li>
             </ul>
         </nav>
     </div>
+  
 
-
-
-
-
-
-    </head>
-
-    <body>
-
+    <main>
         <div class="bookstore-wrap">
-
-
             <div class="main">
-
                 <div class="topbar">
                     <div class="search-bar">
-                        <span class="search-icon">&#9906;</span>
-                        <span class="search-placeholder">Search titles, authors, types</span>
+                        <input type="text" id="catSearch" placeholder="Search titles, authors, types..." style="padding:8px; border-radius:8px; border:1px solid #ccc; width:300px;" />
+                        <button id="catSearchBtn" style="padding:8px 16px; border-radius:8px; cursor:pointer;"><i class="fa fa-search"></i> Search</button>
                     </div>
                 </div>
 
-                <h1 class="page-title">Explore all types</h1>
+                <h1 class="page-title">Explore All Categories</h1>
 
-                <div class="section-label">Fiction</div>
+                <div class="section-label"><i class="fa fa-dragon"></i> Fiction</div>
                 <div class="categories-grid fiction-grid">
-
-                    <div class="cat-card c1">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Literary Fiction</span>
-                    </div>
-
-                    <div class="cat-card c5">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Fantasy &amp; Epic</span>
-                    </div>
-
-                    <div class="cat-card c4">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Sci-Fi</span>
-                    </div>
-
-                    <div class="cat-card c9">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Mystery & Thriller</span>
-                    </div>
-
-                    <div class="cat-card c6">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Romance</span>
-                    </div>
-
-                    <div class="cat-card c2">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Historical</span>
-                    </div>
-
-                    <div class="cat-card c7">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Horror</span>
-                    </div>
-
-                    <div class="cat-card c12">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Magical Realism</span>
-                    </div>
-
+                    <div class="cat-card c1"><div class="cover-art"></div><span class="cat-name">Literary Fiction</span></div>
+                    <div class="cat-card c5"><div class="cover-art"></div><span class="cat-name">Fantasy &amp; Epic</span></div>
+                    <div class="cat-card c4"><div class="cover-art"></div><span class="cat-name">Sci-Fi</span></div>
+                    <div class="cat-card c9"><div class="cover-art"></div><span class="cat-name">Mystery &amp; Thriller</span></div>
+                    <div class="cat-card c6"><div class="cover-art"></div><span class="cat-name">Romance</span></div>
+                    <div class="cat-card c2"><div class="cover-art"></div><span class="cat-name">Historical</span></div>
+                    <div class="cat-card c7"><div class="cover-art"></div><span class="cat-name">Horror</span></div>
+                    <div class="cat-card c12"><div class="cover-art"></div><span class="cat-name">Magical Realism</span></div>
                 </div>
 
-                <div class="section-label">Non-Fiction</div>
+                <div class="section-label"><i class="fa fa-graduation-cap"></i> Non-Fiction</div>
                 <div class="categories-grid nonfiction-grid">
-
-                    <div class="cat-card c3">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Self-Development</span>
-                    </div>
-
-                    <div class="cat-card c8">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Business</span>
-                    </div>
-
-                    <div class="cat-card c10">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Science & Nature</span>
-                    </div>
-
-                    <div class="cat-card c11">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">History & Politics</span>
-                    </div>
-
-                    <div class="cat-card c13">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Art & Design</span>
-                    </div>
-
-                    <div class="cat-card c14">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Food &a Cooking</span>
-                    </div>
-
-                    <div class="cat-card c15">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Health & Wellness</span>
-                    </div>
-
-                    <div class="cat-card c16">
-                        <div class="cover-art"></div>
-                        <span class="cat-name">Travel</span>
-                    </div>
-
+                    <div class="cat-card c3"><div class="cover-art"></div><span class="cat-name">Self-Development</span></div>
+                    <div class="cat-card c8"><div class="cover-art"></div><span class="cat-name">Business</span></div>
+                    <div class="cat-card c10"><div class="cover-art"></div><span class="cat-name">Science &amp; Nature</span></div>
+                    <div class="cat-card c11"><div class="cover-art"></div><span class="cat-name">History &amp; Politics</span></div>
+                    <div class="cat-card c13"><div class="cover-art"></div><span class="cat-name">Art &amp; Design</span></div>
+                    <div class="cat-card c14"><div class="cover-art"></div><span class="cat-name">Food &amp; Cooking</span></div>
+                    <div class="cat-card c15"><div class="cover-art"></div><span class="cat-name">Health &amp; Wellness</span></div>
+                    <div class="cat-card c16"><div class="cover-art"></div><span class="cat-name">Travel</span></div>
                 </div>
-
             </div>
-
         </div>
+    </main>
 
-    </body>
+    <div class="footer">
+        <footer>
+            <p>© 2026 Bookology — All rights reserved</p>
+        </footer>
+    </div>
 
-</html>
-
-
-
-
-
-
-
-
-<div class="footer">
-    <footer>
-        <p>© 2026 Bookology — All rights reserved</p>
-    </footer>
-    <script src="script.js"></script>
-</div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
-
 </html>
